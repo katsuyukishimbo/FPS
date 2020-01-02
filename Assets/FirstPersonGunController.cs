@@ -25,6 +25,10 @@ public class FirstPersonGunController : MonoBehaviour
   int ammo;
   GameObject muzzleFlash;
   GameObject hitEffect;
+
+  GameObject enemy;
+
+  public EnemyController hp;  
   public int Ammo
   {
     set
@@ -42,10 +46,14 @@ public class FirstPersonGunController : MonoBehaviour
     }
     void Update()
     {
-    if (shootEnabled & ammo > 0 & GetInput())
-    {
-      StartCoroutine(ShootTimer());
-    }
+      if (shootEnabled & ammo > 0 & GetInput())
+      {
+        StartCoroutine(ShootTimer());
+      }
+      else if (Input.GetKeyDown(KeyCode.R))
+      {
+        ammo = 100;
+      }
     }
   void InitGun()
   {
@@ -108,8 +116,6 @@ public class FirstPersonGunController : MonoBehaviour
     Ray ray = new Ray(transform.position, transform.forward);
     RaycastHit hit;
 
-    Debug.DrawLine (ray.origin, ray.direction * 10, Color.red);
-    //レイを飛ばして、ヒットしたオブジェクトの情報を得る
     if (Physics.Raycast(ray, out hit, shootRange))
     {
       //ヒットエフェクトON
@@ -126,7 +132,10 @@ public class FirstPersonGunController : MonoBehaviour
           hitEffect = Instantiate(hitEffectPrefab, hit.point, Quaternion.identity);
         }
       }
-      //★ここに敵へのダメージ処理などを追加
+
+      enemy = GameObject.Find("Zombie");
+      hp = enemy.GetComponent<EnemyController>();
+      hp.Damage(1);
     }
     Ammo--;
   }

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Easy FPS\Scripts\GunScript.cs" />
      <Compile Include="Assets\Easy FPS\Scripts\MouseLookScript.cs" />
      <Compile Include="Assets\Easy FPS\Scripts\PlayerMovementScript.cs" />
+     <Compile Include="Assets\EnemyController.cs" />
      <Compile Include="Assets\EnemyScript.cs" />
      <Compile Include="Assets\FirstPersion AIO Pack\DemoScene\MiscScripts\Doors.cs" />
      <Compile Include="Assets\FirstPersion AIO Pack\FirstPersonAIO\FirstPersonAIO.cs" />
@@ -235,20 +236,14 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
@@ -259,11 +254,17 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -451,11 +452,11 @@
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>/Users/katsuyuki-shimbo/work/FPS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
