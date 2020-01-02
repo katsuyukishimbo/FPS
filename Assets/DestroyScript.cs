@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DestroyScript : MonoBehaviour
 {
-    public int damage;          //当たった部位毎のダメージ量
-    public GameObject Zombie3;   //敵オブジェクト
+    public int damage;
+    public GameObject Zombie3;
     public EnemyScript hp;   
     // Start is called before the first frame update
     void Start()
     {
-        Zombie3 = GameObject.Find("Zombie3");   //敵情報を取得
-        hp = Zombie3.GetComponent<EnemyScript>();      //HP情報を取得
+        Zombie3 = GameObject.Find("Zombie3");
+        hp = Zombie3.GetComponent<EnemyScript>();
     }
 
     // Update is called once per frame
@@ -22,19 +22,8 @@ public class DestroyScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-                    //HPクラスのDamage関数を呼び出す
-            hp.Damage(damage);
- 
-            //ぶつかってきたオブジェクトを破壊する.
-            Destroy(other.gameObject);
-        // //ぶつかったオブジェクトのTagにShellという名前が書いてあったならば（条件）.
-        // if (other.CompareTag("Shell")){
- 
-        //     //HPクラスのDamage関数を呼び出す
-        //     hp.Damage(damage);
- 
-        //     //ぶつかってきたオブジェクトを破壊する.
-        //     Destroy(other.gameObject);
-        // }
+        hp.Damage(damage);
+
+        Destroy(other.gameObject);
     }
 }

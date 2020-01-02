@@ -22,7 +22,6 @@ public class EnemyScript : MonoBehaviour
 
     public void Damage(int damage)
     {
-        //受け取ったダメージ分HPを減らす
         hitPoint -= damage;
     }
 }

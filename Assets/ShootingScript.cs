@@ -5,13 +5,15 @@ using UnityEngine;
 public class ShootingScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject flash;
     public float shotSpeed;
     public int shotCount = 30;
     private float shotInterval;
     // Start is called before the first frame update
+    Renderer _renderer;
     void Start()
     {
-        
+        _renderer = flash.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class ShootingScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.C))
         {
- 
+             _renderer.enabled = false;
             shotInterval += 1;
  
             if (shotInterval % 5 == 0 && shotCount > 0)
@@ -30,11 +32,8 @@ public class ShootingScript : MonoBehaviour
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
                 bulletRb.AddForce(transform.forward * shotSpeed);
  
-                //射撃されてから3秒後に銃弾のオブジェクトを破壊する.
- 
                 Destroy(bullet, 3.0f);
             }
- 
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
